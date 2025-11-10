@@ -1,0 +1,428 @@
+/* UI overrides to match modern reference */
+
+/* Typography */
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1, h2, h3, h4, h6 {
+  font-family: "Saira Extra Condensed", Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  color: #1f3a5b;
+}
+
+h1 .text-primary {
+  color: #9a031e !important;
+}
+
+.subheading {
+  color: #9a031e;
+}
+
+/* Accent text utility */
+.text-accent { color: #9a031e !important; }
+
+/* Section headings accent bar */
+#experience h2,
+#education h2 {
+  color: #1f3a5b;
+  position: relative;
+}
+#experience h2::after,
+#education h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #9a031e;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* Sidebar gradient and active state */
+#sideNav {
+  background: linear-gradient(180deg, #b3122a 0%, #7a0b1f 100%) !important;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link.active,
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+}
+
+.navbar-brand .img-profile {
+  border: 6px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Section card look */
+section.resume-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  section.resume-section {
+    margin: 1.5rem 1.75rem;
+  }
+}
+
+/* Modern timeline for Experience and Education */
+#experience .resume-item,
+#education .resume-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 1.5rem;
+}
+#experience .resume-item::before,
+#education .resume-item::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0.8rem;
+  width: 10px;
+  height: 10px;
+  background: #9a031e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(154, 3, 30, 0.18);
+}
+#experience .resume-item::after,
+#education .resume-item::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 2rem;
+  width: 2px;
+  height: calc(100% + 1.5rem);
+  background: rgba(31, 58, 91, 0.2);
+}
+#experience .resume-item:last-child::after,
+#education .resume-item:last-child::after {
+  display: none;
+}
+
+/* Card styling for item content */
+#experience .resume-content,
+#education .resume-content {
+  background: #fff;
+  border: 1px solid rgba(31, 58, 91, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+#experience .resume-content h3,
+#education .resume-content h3 {
+  color: #1f3a5b;
+  font-size: 1.6rem;
+}
+#experience .resume-content .subheading,
+#education .resume-content .subheading {
+  color: #9a031e;
+  font-weight: 600;
+}
+#experience .resume-content ul,
+#education .resume-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#experience .resume-content ul li,
+#education .resume-content ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+#experience .resume-content ul li::before,
+#education .resume-content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background: #1f3a5b;
+  border-radius: 50%;
+}
+
+#experience .resume-date,
+#education .resume-date {
+  color: #6c757d;
+  font-weight: 600;
+}
+#experience .resume-date .text-primary,
+#education .resume-date .text-primary {
+  color: #1f3a5b !important;
+}
+#experience .resume-date .logo img,
+#education .resume-date .logo img {
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  max-width: 220px;
+}
+
+@media (max-width: 767px) {
+  #experience .resume-item,
+  #education .resume-item {
+    padding-left: 0;
+    margin-bottom: 1.25rem;
+  }
+  #experience .resume-item::before,
+  #education .resume-item::before,
+  #experience .resume-item::after,
+  #education .resume-item::after {
+    display: none;
+  }
+  #experience .resume-content,
+  #education .resume-content {
+    box-shadow: none;
+    border: 1px solid rgba(31, 58, 91, 0.08);
+  }
+}
+
+/* Certifications heading accent */
+#awards h2 {
+  color: #1f3a5b;
+  position: relative;
+}
+#awards h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #9a031e;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* Modern sidebar feel without changing colors */
+#sideNav .navbar-nav {
+  gap: 6px;
+}
+#sideNav .navbar-nav .nav-item .nav-link {
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+#sideNav .navbar-nav .nav-item .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  transition: height 0.2s ease;
+}
+#sideNav .navbar-nav .nav-item .nav-link.active::before,
+#sideNav .navbar-nav .nav-item .nav-link:hover::before {
+  height: 70%;
+}
+
+/* Certification cards */
+.certification-card {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.certification-card .card-img-top {
+  object-fit: contain;
+  max-height: 140px;
+  padding: 12px;
+  cursor: zoom-in;
+}
+.certification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Contact buttons */
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.contact-buttons { align-items: center; }
+.btn-contact {
+  border-radius: 9999px;
+  padding: 0.5rem 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+.btn-contact i { margin-right: 6px; }
+.btn-contact.btn-email {
+  background-color: #9a031e;
+  color: #fff;
+}
+.btn-contact.btn-linkedin { background-color: #0A66C2; color: #fff; }
+.btn-contact.btn-github { background-color: #24292e; color: #fff; }
+.btn-contact:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Headline section styles */
+.headline-section {
+  background: linear-gradient(90deg, rgba(10,102,194,0.08), rgba(255,166,43,0.08));
+  border-bottom: 1px solid rgba(31,58,91,0.08);
+}
+.site-headline {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1f3a5b;
+  letter-spacing: 0.2px;
+}
+@media (min-width: 992px) {
+  .site-headline { font-size: 1.35rem; }
+}
+
+/* Contact row tagline */
+.contact-headline {
+  order: -1;                /* appear first, starts left-to-right */
+  flex-basis: 100%;         /* own line above buttons for clarity */
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1f3a5b;
+  opacity: 0.95;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: normal;
+  background: linear-gradient(90deg, rgba(10,102,194,0.08), rgba(255,166,43,0.08));
+  border: 1px solid rgba(31,58,91,0.12);
+  border-radius: 9999px;
+  padding: 0.5rem 0.75rem;
+}
+@media (max-width: 576px) {
+  .contact-headline {
+    margin-top: 6px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* GitHub CTA block */
+.github-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #24292e;
+  color: #fff;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.github-cta .fa-github { color: #fff; }
+.github-cta .text-white { color: #fff !important; }
+.github-cta .text-white-50 { color: rgba(255,255,255,0.7) !important; }
+.github-cta .cta-actions { flex-shrink: 0; }
+@media (max-width: 576px) {
+  .github-cta { flex-direction: column; gap: 12px; text-align: center; }
+}
+
+/* Modern project cards */
+.project-card {
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.08);
+  border: 1px solid rgba(31,58,91,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.12);
+}
+.project-card .card-img-top {
+  max-height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(31,58,91,0.06);
+}
+.project-card .card-footer {
+  background: transparent;
+  border-top: 1px solid rgba(31,58,91,0.08);
+  display: grid; /* ensure equal widths for two buttons */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Small CTA buttons for cards */
+.btn-cta { 
+  border-radius: 9999px; 
+  padding: 0.45rem 0.9rem; 
+  font-weight: 600; 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease; 
+}
+.btn-cta.btn-sm {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.875rem;
+}
+.btn-cta i { margin-right: 6px; }
+.btn-cta.btn-site { background-color: #9a031e; color: #fff; }
+.btn-cta.btn-github { background-color: #24292e; color: #fff; }
+.btn-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12); }
+
+/* Make card footer CTAs equal width and consistent height */
+.project-card .card-footer .btn-cta {
+  width: 100%;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Skills badges for Experience cards */
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.skills-badges .badge {
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #edf2f7; /* soft slate */
+  color: #1f2937;
+}
+
+/* Tighter top spacing for Skills section */
+#skills.resume-section {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+@media (min-width: 992px) {
+  #skills.resume-section {
+    padding-top: 1rem !important;
+    margin-top: 0 !important;
+  }
+  /* Disable vertical centering for Skills on desktop */
+  #skills .my-auto {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Ensure heading starts flush at top */
+#skills h2 { margin-top: 0; }
+
+/* Reduce gap from Education into Skills on desktop (collapse fix) */
+@media (min-width: 992px) {
+  #education.resume-section { margin-bottom: 2rem !important; }
+}
+
+/* Subtle separator styling */
+hr {
+  border: 0;
+  border-top: 1px solid rgba(31,58,91,0.15);
+  margin: 0.75rem 0;
+}
